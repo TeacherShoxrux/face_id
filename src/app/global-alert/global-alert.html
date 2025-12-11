@@ -1,0 +1,10 @@
+@if (alertService.alertMessage) {
+<div class="alert-backdrop">
+  <div class="alert-box">
+    <h3>Xatolik!</h3>
+    <p>{{ alertService.alertMessage }}</p>
+
+    <button (click)="close()">OK</button>
+  </div>
+</div>
+}

@@ -1,0 +1,26 @@
+<div class="face-container">
+
+  <div class="circle-frame">
+    <!-- LOADING -->
+    <div *ngIf="loading" class="loading-text">Processing…</div>
+
+    <!-- CAMERA -->
+    <video
+      #video
+      *ngIf="!loading"
+      autoplay
+      playsinline>
+    </video>
+  </div>
+
+  <!-- Capture Button -->
+  <button class="capture-btn" (click)="capture()">
+    @if (!loading) {<span *ngIf="!loading">Yuzni aniqlash</span>}
+    
+   @if (loading) { <span *ngIf="loading" class="spinner"></span>}
+  </button>
+
+  <!-- ERROR PRINT -->
+  @if (errorMessage) { <p class="error">{{ errorMessage }}</p>}
+  
+</div>

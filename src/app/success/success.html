@@ -1,0 +1,46 @@
+<!-- <div class="success-container">
+  <div class="top-spacer"></div>
+
+  <div class="card">
+    <div class="checkmark-wrap">
+      <div class="checkmark">✓</div>
+    </div>
+
+    <h1>Welcome, {{ userName }}!</h1>
+    <p class="subtitle">Siz muvaffaqiyatli tizimga kirdingiz.</p>
+
+    <div class="photo-wrap" NgIf="imageSrc">
+      <img [src]="imageSrc" alt="User image" />
+    </div>
+
+    <div class="buttons">
+      <button class="primary" (click)="goToDashboard()">Go to Dashboard</button>
+      <button class="secondary" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="profile-container" NgIf="person">
+  <div class="profile-card">
+    <h2>Yuz tanildi!</h2>
+
+    <div class="profile-info">
+      <p><strong>ID:</strong> {{ person?.id }}</p>
+      <p><strong>Ism:</strong> {{ person?.name }}</p>
+      <p><strong>O'xshashlik:</strong> {{ person?.similarity | number:'1.2-2'}}</p>
+    </div>
+
+    <div class="profile-images">
+     
+      <div class="captured-image-container">
+        <p><strong>Foydalanuvchiinig rasmi:</strong></p>
+        <img src="http://localhost:5292/uploads/{{person?.fileName}}" alt="Captured Image" class="profile-photo"/>
+      </div>
+    
+    
+    </div>
+     <button class="back-btn" (click)="goBack()">⬅ Orqaga qaytish</button>
+  </div>
+</div>
+
+
