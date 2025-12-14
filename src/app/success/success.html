@@ -27,14 +27,14 @@
     <div class="profile-info">
       <p><strong>ID:</strong> {{ person?.id }}</p>
       <p><strong>Ism:</strong> {{ person?.name }}</p>
-      <p><strong>O'xshashlik:</strong> {{ person?.similarity | number:'1.2-2'}}</p>
+      <p><strong>O'xshashlik:</strong> 60% dan yuqori </p>
     </div>
 
     <div class="profile-images">
      
       <div class="captured-image-container">
         <p><strong>Foydalanuvchiinig rasmi:</strong></p>
-        <img src="http://localhost:5292/uploads/{{person?.fileName}}" alt="Captured Image" class="profile-photo"/>
+        <img src="/api/uploads/{{person?.fileName}}" alt="Captured Image" class="profile-photo"/>
       </div>
     
     

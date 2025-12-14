@@ -46,7 +46,7 @@ import { DecimalPipe } from '@angular/common';
   selector: 'app-success',
   templateUrl: './success.html',
     styleUrls: ['./success.css'],
-  imports: [DecimalPipe],
+  // imports: [DecimalPipe],
 })
 export class Success implements OnInit {
   person: any = null;

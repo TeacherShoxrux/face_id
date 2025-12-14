@@ -18,7 +18,7 @@ export class Login implements AfterViewInit {
   loading = false;
   capturedImage: string | null = null;
   errorMessage = '';
-  apiUrl = 'http://localhost:5292/api/v1/Auth/recognize';
+  apiUrl = '/api/v1/Auth/recognize';
 
   constructor(private http: HttpClient, private router: Router,private alert: AlertService,private zone: NgZone) { }
 
